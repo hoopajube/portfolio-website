@@ -1,6 +1,6 @@
 # portfolio-website
 
-Code for portfolio website. want to use the same layout and change it up? see steps below and I'll show you how to replicate it!
+Code for portfolio website. want to use the same layout and change it up? see steps below and I'll show you how to replicate it! The deployment done via lamdba is done on separate repo. If you would like to experiment with that...I will link it below.
 
 ![portfolio website diagram](images/cicd-pipeline-for-portfolio-website.png)
 
@@ -16,5 +16,9 @@ aws cloudformation create-stack --capabilities CAPABILITY_IAM --parameters Param
 ## setup contents
 
 - The cloudformation template should have created a website bucket with the 'SiteBucketName' you named. Now clone this repo and copy over the directory structure.
+
+- commit to your repo and watch the pipeline get kicked off in the aws pipeline console!
+
+![portfolio-pipeline-image.png](images/portfolio-pipeline-image.png)
 
 - Now experiment with the html code and structure! Have Fun!
