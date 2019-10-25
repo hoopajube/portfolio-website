@@ -8,11 +8,11 @@ Parameters:
   GitHubUser:
     Type: String
     Description: GitHub User
-    Default: "stelligent"
+    Default: "alexpereyra"
   GitHubRepo:
     Type: String
     Description: GitHub Repo to pull from. Only the Name. not the URL
-    Default: "sample-s3-delivery"
+    Default: "portfolio-website"
   GitHubBranch:
     Type: String
     Description: GitHub Branch
@@ -58,17 +58,17 @@ Metadata:
         default: Name of S3 Bucket to create for website hosting
       GitHubToken:
         default: GitHub OAuth2 Token
-      GitHubUser: 
+      GitHubUser:
         default: GitHub User/Org Name
-      GitHubRepo: 
+      GitHubRepo:
         default: GitHub Repository Name
-      GitHubBranch: 
+      GitHubBranch:
         default: GitHub Branch Name
-      BuildType: 
+      BuildType:
         default: CodeBuild type
-      BuildComputeType: 
+      BuildComputeType:
         default: CodeBuild instance type
-      BuildImage: 
+      BuildImage:
         default: CodeBuild image
 Resources:
   CodeBuildRole:
@@ -212,4 +212,3 @@ Outputs:
   SiteUrl:
     Value: !GetAtt [SiteBucket, WebsiteURL]
     Description: S3 Website URL
-
